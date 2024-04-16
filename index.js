@@ -33,7 +33,17 @@ const deleteTweet = async () => {
     }
 }
 
-const tweetId = '*****'
 deleteTweet(tweetId)
+
+const userInfo = async () => {
+    
+    try {
+        let result = await client.v2.me();
+        console.log("result: ", result);
+    } catch (error) {
+        console.log("error: ", error);
+    }
+}
+userInfo()
 
 ReferenceLink :https://www.geeksforgeeks.org/tweet-using-node-js-and-twitter-api/
